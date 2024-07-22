@@ -1,2 +1,4 @@
 node_modules
 _site
+/src/css/style.css
+/src/css/style.map.css
