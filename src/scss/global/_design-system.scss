@@ -194,9 +194,9 @@
   --padding-1000: calc(var(--baseline)*10);
 
   // Components
-  --component-margin-top-child-pages: var(--margin-000);
-  --component-margin-top-first: var(--margin-400);
-  --component-margin-top-default: var(--margin-800);
+  --component-margin-top-child-pages: var(--padding-000);
+  --component-margin-top-first: var(--padding-400);
+  --component-margin-top-default: var(--padding-800);
   --footer-margin-800: calc(var(--baseline) * 8);
 
   // Text
@@ -217,9 +217,9 @@
     --page-margin-300: calc(var(--col)*1);
     --page-margin-500: calc(var(--col)*1);
 
-    --component-margin-top-child-pages: var(--margin-000);
-    --component-margin-top-first: var(--margin-400);
-    --component-margin-top-default: var(--margin-800);
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-400);
+    --component-margin-top-default: var(--padding-800);
   }
 
   @media screen and (min-width: 768px) {
@@ -235,9 +235,9 @@
     --page-margin-300: calc(var(--col)*3);
     --page-margin-500: calc(var(--col)*5);
     
-    --component-margin-top-child-pages: var(--margin-000);
-    --component-margin-top-first: var(--margin-500);
-    --component-margin-top-default: var(--margin-1000);
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-500);
+    --component-margin-top-default: var(--padding-1000);
     --footer-margin-800: calc(var(--baseline) * 12);
   }
 
@@ -252,7 +252,7 @@
     --page-margin-100: calc(var(--col)*3);
     --page-margin-200: calc(var(--col)*3);
     --page-margin-500: calc(var(--col)*6);
-    --component-margin-top-first: var(--margin-600);
+    --component-margin-top-first: var(--padding-600);
     --component-margin-top-default: calc(var(--baseline) * 12);
     --footer-margin-800: calc(var(--baseline) * 14);
   }
@@ -261,7 +261,7 @@
     --page-margin-100: calc(var(--col)*4);
     --page-margin-200: calc(var(--col)*4);
     --page-margin-500: calc(var(--col)*6);
-    --component-margin-top-first: var(--margin-700);
+    --component-margin-top-first: var(--padding-700);
     --component-margin-top-default: calc(var(--baseline) * 14);
     --footer-margin-800: calc(var(--baseline) * 16);
   }

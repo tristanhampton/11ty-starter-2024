@@ -3,5 +3,10 @@
   "GTM_ID": null,
   "og_image_default" : null,
   "theme_colour": "#CCC",
-  "twitter_card": null
+  "twitter_card": null,
+  "facebook": "https://facebook.com",
+  "instagram": "https://instagram.com",
+  "linkedin": "https://linkedin.com",
+  "youtube": "https://youtube.com",
+  "x": "https://twitter.com"
 }

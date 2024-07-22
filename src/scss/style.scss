@@ -3,8 +3,15 @@
 @import "global/reset";
 @import "global/design-system";
 @import "global/typography";
+@import "global/layout";
+@import "global/navigation.scss";
+@import "global/header.scss";
+@import "global/footer.scss";
+@import "global/components.scss";
 
 /* Components
  * ----------------------------------------------- */
-@import "components/header.scss";
 @import "components/banner-default.scss";
+@import "components/text-block.scss";
+@import "components/table.scss";
+@import "components/child-pages.scss";

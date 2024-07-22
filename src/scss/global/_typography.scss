@@ -202,7 +202,8 @@ main {
   }
 
   *+h6,
-  *+.table-wrapper {
+  *+.table-wrapper,
+  *+table {
     margin-top: var(--vertical-type-spacing-med);
   }
 
