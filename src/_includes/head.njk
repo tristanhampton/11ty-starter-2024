@@ -6,7 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{{site.title}}{% if title %} - {{ title }}{% endif %}</title>
 
-	<meta name="description" content="{{ metaDescription }}">
+	{% if meta_description %}
+		<meta name="description" content="{{ meta_description }}">
+	{% endif %}
 
 	{% if og_title or title %}
 		<meta property="og:title" content="{{ og_title if og_title else title }}">
