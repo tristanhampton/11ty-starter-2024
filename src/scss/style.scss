@@ -1,0 +1,10 @@
+/* Global Styles
+ * ----------------------------------------------- */
+@import "global/reset";
+@import "global/design-system";
+@import "global/typography";
+
+/* Components
+ * ----------------------------------------------- */
+@import "components/header.scss";
+@import "components/banner-default.scss";
