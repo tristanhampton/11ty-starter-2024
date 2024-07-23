@@ -181,6 +181,11 @@ main {
     margin-top: var(--vertical-type-spacing-med);
   }
 
+  h2 + div {
+    // usually inside a component with a content wrapper
+    margin-top: var(--vertical-type-spacing-lrg);
+  }
+
   h3+*,
   h4+* {
     margin-top: var(--vertical-type-spacing-sm);
@@ -210,6 +215,10 @@ main {
   *+small,
   *+figcaption {
     margin-top: var(--vertical-type-spacing-xs);
+  }
+
+  *+p:has([class*="btn"]) {
+    margin-top: var(--vertical-type-spacing-med);
   }
 
   ul,
