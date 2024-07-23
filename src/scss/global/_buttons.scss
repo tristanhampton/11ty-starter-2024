@@ -34,6 +34,7 @@
   @include btn-defaults;
   background-color: var(--text-primary);
   color: var(--text-invert-primary);
+  border: var(--button-primary-border);
 
   &:visited {
     color: var(--text-invert-primary);
@@ -46,6 +47,28 @@
   }
 }
 
+@mixin btn-secondary {
+  @include btn-defaults;
+  background-color: var(--button-secondary-surface);
+  border: var(--button-secondary-border);
+  color: var(--button-secondary-color);
+
+  &:visited {
+    color: var(--button-secondary-color);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-secondary-surface-hover);
+    border: var(--button-secondary-border-hover);
+    color: var(--button-secondary-color-hover);
+  }
+}
+
 .btn-primary {
   @include btn-primary;
+}
+
+.btn-secondary {
+  @include btn-secondary;
 }

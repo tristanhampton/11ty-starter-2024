@@ -286,13 +286,10 @@
   // Secondary Button
   --button-secondary-surface: var(--surface-link-primary);
   --button-secondary-border: var(--border-thickness-200) solid var(--surface-link-primary);
-  --button-secondary-color: var(--text-invert-primary);
-  --button-secondary-surface: var(--surface-link-primary);
+  --button-secondary-color: var(--white-1000);
+  --button-secondary-surface-hover: transparent;
   --button-secondary-border-hover: var(--border-thickness-200) solid var(--surface-link-primary);
-  --button-secondary-color: var(--text-invert-primary);
-
-  --button-secondary-surface-hover: var(--surface-link-invert);
-  --button-secondary-color-hover: var(--text-link-primary);
+  --button-secondary-color-hover: var(--surface-link-primary);
 }
 
 /* Webforms
