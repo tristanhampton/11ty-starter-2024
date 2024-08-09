@@ -1,0 +1,949 @@
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/style.scss ***!
+  \**********************************************************************************************************************************************************************/
+/* Global Styles
+ * ----------------------------------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Reset Body */
+body {
+  margin: 0;
+}
+
+/* System Variables
+ * ----------------------------------------------- */
+:root {
+  font-size: 16px;
+  font-size: 62.5%;
+  --font-size: 1.8rem;
+  --baseline: 0.8rem;
+  --col: 5vw;
+  --heading-1: 2.66em;
+  --heading-2: 2.22em;
+  --heading-3: 1.77em;
+  --heading-4: 1.33em;
+  --heading-5: 1em;
+  --heading-6: 1em;
+  --font-large: 1.33em;
+  --font-small: 0.88em;
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --heading-1: 2.22em;
+    --heading-2: 1.77em;
+    --heading-3: 1.55em;
+    --heading-4: 1.33em;
+    --heading-5: 1.2em;
+    --heading-6: 1em;
+  }
+}
+@media screen and (min-width: 1900px) {
+  :root {
+    --font-size: 2rem;
+  }
+}
+@media screen and (min-width: 2400px) {
+  :root {
+    --font-size: 2.2rem;
+  }
+}
+
+/* Colours
+ * ----------------------------------------------- */
+:root {
+  --black-000: #000;
+  --grey-200: #323232;
+  --grey-400: #636363;
+  --grey-500: #7C7D7C;
+  --grey-600: #969696;
+  --grey-700: #AFB0AF;
+  --grey-800: #C9C9C9;
+  --grey-900: #E2E3E2;
+  --white-1000: #FFF;
+  --system-green-500: #00B38F;
+  --system-yellow-500: #FFE75D;
+  --system-red-500: #DB6666;
+}
+
+/* Typography
+ * ----------------------------------------------- */
+:root {
+  --text-primary: var(--grey-200);
+  --text-secondary: var(--grey-500);
+  --text-link-primary: var(--system-green-500);
+  --text-link-visited: var(--system-green-500);
+  --text-link-hover: var(--system-yellow-500);
+  --text-invert-primary: var(--white-1000);
+  --text-invert-secondary: var(--grey-800);
+  --text-invert-hover: var(--system-red-500);
+  --text-accent: var(--system-green-500);
+  --vertical-type-spacing-size-xs: 1;
+  --vertical-type-spacing-size-sm: 1;
+  --vertical-type-spacing-size-med: 2;
+  --vertical-type-spacing-size-lrg: 2;
+  --vertical-type-spacing-xs: calc(var(--baseline) * var(--vertical-type-spacing-size-xs));
+  --vertical-type-spacing-sm: calc(var(--baseline) * var(--vertical-type-spacing-size-sm));
+  --vertical-type-spacing-med: calc(var(--baseline) * var(--vertical-type-spacing-size-med));
+  --vertical-type-spacing-lrg: calc(var(--baseline) * var(--vertical-type-spacing-size-lrg));
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --vertical-type-spacing-size-xs: 1;
+    --vertical-type-spacing-size-sm: 2;
+    --vertical-type-spacing-size-med: 3;
+    --vertical-type-spacing-size-lrg: 3;
+  }
+}
+@media screen and (min-width: 1020px) {
+  :root {
+    --vertical-type-spacing-size-xs: 1;
+    --vertical-type-spacing-size-sm: 2;
+    --vertical-type-spacing-size-med: 3;
+    --vertical-type-spacing-size-lrg: 3;
+  }
+}
+
+/* Surface
+ * ----------------------------------------------- */
+:root {
+  --surface-primary: var(--white-1000);
+  --surface-invert: var(--system-green-500);
+  --surface-hover: var(--system-green-500);
+  --surface-secondary: var(--grey-900);
+  --surface-navigation-primary: var(--grey-900);
+  --surface-navigation-secondary: var(--grey-900);
+  --surface-link-primary: var(--system-green-500);
+  --surface-link-hover: var(--system-green-500);
+  --surface-link-invert: var(--white-1000);
+  --surface-link-invert-hover: var(--system-green-500);
+  --surface-disabled: var(--grey-500);
+  --surface-alert: var(--system-yellow-500);
+  --surface-code-view: var(--grey-900);
+}
+
+/* Icons
+* ----------------------------------------------- */
+:root {
+  --icon-primary: var(--grey-200);
+  --icon-invert-primary: var(--white-1000);
+  --icon-secondary: var(--grey-500);
+  --icon-invert-secondary: var(--grey-900);
+}
+
+/* Borders
+ * ----------------------------------------------- */
+:root {
+  --border-color-primary: var(--grey-500);
+  --border-color-secondary: var(--grey-800);
+  --border-color-hover: var(--grey-200);
+  --border-color-accent: var(--system-green-500);
+  --border-color-inverse-accent: var(--system-green-500);
+  --border-color-emergency: var(--system-error-500);
+  --border-radius-000: 0;
+  --border-radius-200: 0.2rem;
+  --border-radius-400: 0.4rem;
+  --border-radius-800: 0.8rem;
+  --radius-button-000: var(--border-radius-000);
+  --radius-button-300: var(--border-radius-400);
+  --radius-button-500: var(--border-radius-800);
+  --radius-frame-000: var(--border-radius-000);
+  --radius-frame-300: var(--border-radius-400);
+  --radius-frame-500: var(--border-radius-800);
+  --radius-media-000: var(--border-radius-000);
+  --radius-media-400: var(--border-radius-400);
+  --radius-media-800: var(--border-radius-800);
+  --border-thickness-000: 0;
+  --border-thickness-100: 0.1rem;
+  --border-thickness-200: 0.2rem;
+  --border-thickness-300: 0.3rem;
+  --box-shadow: 0px 0.2rem 0.6rem 0px rgba(50, 50, 50, 0.40);
+}
+
+/* Spacing
+ * ----------------------------------------------- */
+:root {
+  --padding-000: 0;
+  --padding-100: calc(var(--baseline)*1);
+  --padding-200: calc(var(--baseline)*2);
+  --padding-300: calc(var(--baseline)*3);
+  --padding-400: calc(var(--baseline)*4);
+  --padding-500: calc(var(--baseline)*5);
+  --padding-600: calc(var(--baseline)*6);
+  --padding-700: calc(var(--baseline)*7);
+  --padding-800: calc(var(--baseline)*8);
+  --padding-900: calc(var(--baseline)*9);
+  --padding-1000: calc(var(--baseline)*10);
+  --component-margin-top-child-pages: var(--padding-000);
+  --component-margin-top-first: var(--padding-400);
+  --component-margin-top-default: var(--padding-800);
+  --footer-margin-800: calc(var(--baseline) * 8);
+  --text-margin-100: calc(var(--baseline)*1);
+  --text-margin-200: calc(var(--baseline)*2);
+  --text-margin-300: calc(var(--baseline)*3);
+  --text-margin-500: calc(var(--baseline)*5);
+  --page-margin-100: calc(var(--col)*1);
+  --page-margin-200: calc(var(--col)*2);
+  --page-margin-300: calc(var(--col)*3);
+  --page-margin-500: calc(var(--col)*5);
+}
+@media screen and (min-width: 200px) {
+  :root {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*1);
+    --page-margin-300: calc(var(--col)*1);
+    --page-margin-500: calc(var(--col)*1);
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-400);
+    --component-margin-top-default: var(--padding-800);
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*1);
+    --page-margin-300: calc(var(--col)*2);
+    --page-margin-500: calc(var(--col)*3);
+  }
+}
+@media screen and (min-width: 1020px) {
+  :root {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*2);
+    --page-margin-300: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*5);
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-500);
+    --component-margin-top-default: var(--padding-1000);
+    --footer-margin-800: calc(var(--baseline) * 12);
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*2);
+    --page-margin-300: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*5);
+  }
+}
+@media screen and (min-width: 1900px) {
+  :root {
+    --page-margin-100: calc(var(--col)*3);
+    --page-margin-200: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*6);
+    --component-margin-top-first: var(--padding-600);
+    --component-margin-top-default: calc(var(--baseline) * 12);
+    --footer-margin-800: calc(var(--baseline) * 14);
+  }
+}
+@media screen and (min-width: 2400px) {
+  :root {
+    --page-margin-100: calc(var(--col)*4);
+    --page-margin-200: calc(var(--col)*4);
+    --page-margin-500: calc(var(--col)*6);
+    --component-margin-top-first: var(--padding-700);
+    --component-margin-top-default: calc(var(--baseline) * 14);
+    --footer-margin-800: calc(var(--baseline) * 16);
+  }
+}
+
+/* Buttons
+ * ----------------------------------------------- */
+:root {
+  --button-padding: var(--padding-200) var(--padding-300);
+  --button-font-weight: 700;
+  --button-border-radius: var(--radius-button-500);
+  --button-primary-surface: var(--surface-link-invert);
+  --button-primary-border: var(--border-thickness-200) solid var(--surface-link-invert);
+  --button-primary-color: var(--text-primary);
+  --button-primary-surface-hover: var(--surface-link-hover);
+  --button-primary-color-hover: var(--text-invert-primary);
+  --button-secondary-surface: var(--surface-link-primary);
+  --button-secondary-border: var(--border-thickness-200) solid var(--surface-link-primary);
+  --button-secondary-color: var(--white-1000);
+  --button-secondary-surface-hover: transparent;
+  --button-secondary-border-hover: var(--border-thickness-200) solid var(--surface-link-primary);
+  --button-secondary-color-hover: var(--surface-link-primary);
+}
+
+/* Webforms
+ * ----------------------------------------------- */
+:root {
+  --form-item-spacing: var(--padding-400);
+  --form-input-spacing: var(--padding-100);
+  --input-height: calc(var(--baseline) * 6);
+  --input-padding: 1.2rem;
+  --input-border: var(--border-thickness-200) solid var(--border-color-primary);
+  --focus-state-border: var(--blue-700);
+  --input-border-radius: var(--radius-frame-300);
+  --select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.07,15.21c.07-.11,6.47-6.58,9.62-9.71a1.08,1.08,0,0,1,.56-.31.72.72,0,0,1,.51.19c.33.28.62.6.93.9s.41.72,0,1.13L12.51,18.58a.62.62,0,0,1-1,0L.34,7.45c-.46-.46-.46-.74,0-1.2l.81-.81a.68.68,0,0,1,1.1,0Z'/%3E%3C/svg%3E%0A");
+  --textarea-height: calc(var(--baseline)*10);
+  --fieldset-border: none;
+  --fieldset-padding: 0;
+  --fieldset-legend-size: var(--heading-3);
+  --fieldset-legend-weight: 700;
+  --check-radio-color: var(--green-400);
+  --check-radio-size: calc(var(--baseline) * 3);
+  --check-radio-spacing: var(--padding-100);
+  --check-radio-label-size: var(--font-size);
+  --check-radio-label-weight: 400;
+  --label-size: var(--heading-5);
+  --label-weight: 700;
+  --legend-weight: 400;
+  --description-size: var(--font-size);
+  --file-help-size: var(--captions);
+  --color-picker-width: calc(var(--baseline) * 14);
+  --color-picker-height: calc(var(--baseline) * 2);
+  --range-accent-color: var(--border-color-accent);
+  --scale-accent-color: var(--border-color-accent);
+}
+
+/* Tables
+ * ----------------------------------------------- */
+:root {
+  --table-header-surface: var(--surface-secondary);
+  --table-header-color: var(--text-primary);
+  --table-header-cell-padding: var(--padding-100);
+  --table-header-cell-border: var(--border-thickness-100) solid var(--border-color-primary);
+  --table-body-cell-padding: var(--padding-100);
+  --table-body-cell-border: var(--border-thickness-100) solid var(--border-color-primary);
+  --table-body-row-even-surface: var(--surface-primary);
+  --table-body-row-even-color: var(--text-primary);
+  --table-body-row-odd-surface: var(--surface-primary);
+  --table-body-row-odd-color: var(--text-primary);
+}
+
+/* Type Selection
+ * ----------------------------------------------- */
+/* Headings
+ * ----------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 svg,
+h1 path,
+h2 svg,
+h2 path,
+h3 svg,
+h3 path,
+h4 svg,
+h4 path,
+h5 svg,
+h5 path,
+h6 svg,
+h6 path,
+.h1 svg,
+.h1 path,
+.h2 svg,
+.h2 path,
+.h3 svg,
+.h3 path,
+.h4 svg,
+.h4 path,
+.h5 svg,
+.h5 path,
+.h6 svg,
+.h6 path {
+  fill: currentColor;
+}
+
+h1,
+.h1 {
+  font-size: var(--heading-1);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: var(--heading-2);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-size: var(--heading-3);
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+h4,
+.h4 {
+  font-size: var(--heading-4);
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+h5,
+.h5 {
+  font-size: var(--heading-5);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h6,
+.h6 {
+  font-size: var(--heading-6);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* Basic Text Styles
+ * ----------------------------------------------- */
+body {
+  color: var(--text-primary);
+  font-size: var(--font-size);
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+p,
+li {
+  max-width: 90ch;
+}
+
+ol > li > ol {
+  list-style: lower-latin;
+}
+ol > li > ol > li > ol {
+  list-style: lower-roman;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin-top: var(--padding-200);
+}
+
+.external_icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+small {
+  display: block;
+  margin: 0;
+  font-size: var(--font-small);
+}
+
+cite {
+  display: inline-block;
+  font-style: normal;
+  font-size: var(--font-size);
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+hr {
+  width: 100%;
+  height: 0.1rem;
+  margin-top: var(--padding-200);
+  margin-bottom: var(--padding-200);
+  border: none;
+  background-color: var(--surface-invert);
+}
+
+/* Typography Spacing
+ * ----------------------------------------------- */
+main * + p,
+main * + ul,
+main * + ol,
+main * + a,
+main * + address {
+  margin-top: var(--vertical-type-spacing-sm);
+}
+main * + blockquote {
+  margin-top: var(--vertical-type-spacing-sm);
+}
+main h1 + * {
+  margin-top: var(--vertical-type-spacing-lrg);
+}
+main h2 + * {
+  margin-top: var(--vertical-type-spacing-med);
+}
+main h2 + div {
+  margin-top: var(--vertical-type-spacing-lrg);
+}
+main h3 + *,
+main h4 + * {
+  margin-top: var(--vertical-type-spacing-sm);
+}
+main h5 + *,
+main h6 + * {
+  margin-top: var(--vertical-type-spacing-xs);
+}
+main * + h2 {
+  margin-top: var(--vertical-type-spacing-lrg);
+}
+main * + h3,
+main * + h4,
+main * + h5 {
+  margin-top: var(--padding-500);
+}
+main * + h6,
+main * + .table-wrapper,
+main * + table {
+  margin-top: var(--vertical-type-spacing-med);
+}
+main * + small,
+main * + figcaption {
+  margin-top: var(--vertical-type-spacing-xs);
+}
+main * + p:has([class*=btn]) {
+  margin-top: var(--vertical-type-spacing-med);
+}
+main ul,
+main ol {
+  padding-left: var(--padding-400);
+}
+main ul ul,
+main ul ol,
+main ol ul,
+main ol ol {
+  padding-left: var(--padding-200);
+}
+main li + li {
+  margin-top: var(--padding-200);
+}
+@media screen and (min-width: 768px) {
+  main * + h3,
+  main * + h4,
+  main * + h5 {
+    margin-top: var(--padding-400);
+  }
+}
+
+/* Anchors
+ * ----------------------------------------------- */
+a {
+  color: var(--text-link-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:hover, a:focus {
+  color: var(--text-link-hover);
+  text-decoration: none;
+}
+a:not(.node):not([class*=paragraph]):focus-visible {
+  outline: var(--border-thickness-200) solid var(--focus-state-border);
+  outline-offset: 0.2rem;
+  border-radius: var(--radius-button-300);
+}
+a:visited {
+  color: var(--text-link-visited);
+}
+a.has-external-icon svg {
+  vertical-align: baseline;
+  margin-left: 0.3em;
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+a.has-external-icon svg path {
+  fill: currentColor;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: blue;
+}
+html body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+html main {
+  flex: 1 0 auto;
+}
+html footer {
+  flex-shrink: 0;
+}
+
+.site__navigation ul {
+  display: flex;
+  gap: var(--padding-100) var(--padding-300);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-100) var(--padding-300);
+  padding: var(--padding-200) var(--page-margin-100);
+}
+
+/* Socials
+ * ----------------------------------------------- */
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-100) var(--padding-200);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer__socials a {
+  display: block;
+}
+.footer__socials .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Copyright
+ * ----------------------------------------------- */
+.footer__copyright {
+  margin: 0;
+}
+
+/* Footer General Styles
+ * ----------------------------------------------- */
+.site__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--padding-200) var(--padding-300);
+  padding: var(--padding-200) var(--page-margin-100);
+}
+
+* + .component {
+  margin-top: var(--component-margin-top-default);
+}
+
+[class*=banner] + .component,
+[class*=banner] + .hidden + .component {
+  margin-top: var(--component-margin-top-first);
+}
+
+.btn-primary {
+  display: inline-block;
+  gap: var(--padding-100);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+  font-size: var(--font-small);
+  border-radius: var(--button-border-radius);
+  text-decoration: none !important;
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+  touch-action: manipulation;
+  user-select: none;
+  background-color: var(--text-primary);
+  color: var(--text-invert-primary);
+  border: var(--button-primary-border);
+}
+.btn-primary svg.external-icon {
+  stroke: currentColor;
+}
+.btn-primary svg.external-icon path {
+  fill: currentColor;
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  text-decoration: none;
+}
+.btn-primary:visited {
+  color: var(--text-invert-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+  color: var(--button-primary-color-hover);
+  background-color: var(--button-primary-surface-hover);
+}
+
+.btn-secondary {
+  display: inline-block;
+  gap: var(--padding-100);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+  font-size: var(--font-small);
+  border-radius: var(--button-border-radius);
+  text-decoration: none !important;
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+  touch-action: manipulation;
+  user-select: none;
+  background-color: var(--button-secondary-surface);
+  border: var(--button-secondary-border);
+  color: var(--button-secondary-color);
+}
+.btn-secondary svg.external-icon {
+  stroke: currentColor;
+}
+.btn-secondary svg.external-icon path {
+  fill: currentColor;
+}
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  text-decoration: none;
+}
+.btn-secondary:visited {
+  color: var(--button-secondary-color);
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: var(--button-secondary-surface-hover);
+  border: var(--button-secondary-border-hover);
+  color: var(--button-secondary-color-hover);
+}
+
+/* Components
+ * ----------------------------------------------- */
+.banner {
+  padding: var(--padding-400) var(--page-margin-200);
+  background-color: var(--surface-invert);
+}
+
+.component--text-block {
+  padding: 0 var(--page-margin-500);
+}
+
+/* General Table Styles
+ * ----------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table caption {
+  text-align: left;
+  padding-bottom: var(--padding-300);
+  max-width: min(100vw - var(--page-margin-200) * 2, 90ch);
+}
+table thead {
+  background-color: var(--table-header-surface);
+  color: var(--table-header-color);
+}
+table thead th {
+  border: var(--table-header-cell-border);
+  padding: var(--table-header-cell-padding);
+  text-align: left;
+}
+table tbody tr:nth-of-type(even) {
+  background-color: var(--table-body-row-even-surface);
+  color: var(--table-body-row-even-color);
+}
+table tbody tr:nth-of-type(odd) {
+  background-color: var(--table-body-row-odd-surface);
+  color: var(--table-body-row-odd-color);
+}
+table tbody td,
+table tbody th {
+  border: var(--table-body-cell-border);
+  padding: var(--table-body-cell-padding);
+  text-align: left;
+}
+table tbody th {
+  background-color: var(--table-header-surface);
+}
+
+/* Mobile Overflow Styling
+ * ----------------------------------------------- */
+.table-wrapper {
+  overflow-x: auto;
+}
+.table-wrapper td {
+  min-width: 20rem;
+}
+
+/* Single Child Page Tile
+ * ----------------------------------------------- */
+.component--child-pages .flex-wrapper a {
+  display: block;
+  padding: var(--padding-200);
+  border: var(--border-thickness-100) solid var(--border-color-primary);
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+}
+.component--child-pages .flex-wrapper a:hover :first-child, .component--child-pages .flex-wrapper a:focus :first-child {
+  text-decoration: underline;
+}
+
+/* Child Pages Group
+ * ----------------------------------------------- */
+.component--child-pages {
+  padding: 0 var(--page-margin-200);
+}
+.component--child-pages .flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--padding-400) var(--padding-400);
+  padding: 0;
+  margin-inline: 0;
+  list-style: none;
+}
+.component--child-pages li {
+  flex: 0 1 calc(33% - 2.2rem);
+  margin: 0;
+}
+@media screen and (max-width: 1020px) {
+  .component--child-pages li {
+    flex: 0 1 calc(50% - 1.6rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .component--child-pages li {
+    flex: 0 1 100%;
+  }
+}
+
+/* Single Accordion
+ * ----------------------------------------------- */
+.component--accordions details {
+  border: var(--border-thickness-200) solid var(--border-color-primary);
+  padding: var(--padding-300) var(--padding-400);
+}
+.component--accordions details:not(:last-child) {
+  border-bottom: none;
+}
+.component--accordions details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  font-size: var(--heading-4);
+  line-height: 1.33;
+  font-weight: 700;
+}
+.component--accordions details summary::-webkit-details-marker {
+  display: none;
+}
+.component--accordions details summary::after {
+  display: block;
+  content: "+";
+  color: var(--icon-secondary);
+  flex-shrink: 0;
+  font-size: var(--font-large);
+  font-weight: 400;
+}
+.component--accordions details summary:hover h3, .component--accordions details summary:focus h3 {
+  text-decoration: underline;
+}
+.component--accordions details summary:hover .icon, .component--accordions details summary:focus .icon {
+  fill: var(--icon-primary);
+}
+.component--accordions details summary:focus-visible {
+  outline: var(--border-thickness-200) solid var(--focus-state-border);
+  outline-offset: 0.4rem;
+  border-radius: var(--radius-button-300);
+}
+.component--accordions details[open] {
+  border-color: var(--border-color-hover);
+}
+.component--accordions details[open] summary::after {
+  content: "-";
+}
+.component--accordions details:hover, .component--accordions details:focus-within {
+  border-color: var(--border-color-hover);
+}
+
+/* Accordions Group
+ * ----------------------------------------------- */
+.component--accordions {
+  padding: 0 var(--page-margin-500);
+}

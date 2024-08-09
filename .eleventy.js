@@ -2,18 +2,20 @@ const os = require('os');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
 
 module.exports = function (config) {
+	config.setUseGitIgnore(false);
+	config.setWatchThrottleWaitTime(120);
+
 	//--- Plugins
 	config.addFilter("dump", dumpFilter);
 
 	//--- Misc Options
 	// Additional files to watch for changes
-	config.addWatchTarget("./eleventy/");
+	config.addWatchTarget("src/scss/**/*.scss");
+	config.addWatchTarget("src/js/**/*.js");
 
-	//--- Adds CSS to _site
-	config.addPassthroughCopy({ "src/css": "css" });
-
-	//--- Adds JS to _site
-	config.addPassthroughCopy({ "src/js": "js" });
+	//--- Adds CSS/JS to _site
+	config.addPassthroughCopy({ "dist/main.css": "css" });
+	config.addPassthroughCopy({ "dist/main.js": "js" });
 
 	//--- Adds Favicons to _site
 	config.addPassthroughCopy({ "src/favicons": "favicons" });
@@ -24,6 +26,7 @@ module.exports = function (config) {
 	//--- Adds fonts to _site
 	config.addPassthroughCopy({ "src/fonts": "fonts" });
 
+
 	//--- Determine if local or live
 	config.addGlobalData('local', function () {
 		const hostname = os.hostname();
@@ -33,10 +36,6 @@ module.exports = function (config) {
 		} else {
 			return false;
 		}
-	});
-
-	config.setBrowserSyncConfig({
-		files: './_site/css/*.css'
 	});
 
 	return {
