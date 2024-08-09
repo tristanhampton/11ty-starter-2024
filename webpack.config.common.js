@@ -1,3 +1,4 @@
+// Reference: https://medium.com/@stowball/creating-a-production-ready-eleventy-project-with-webpack-babel-and-sass-89a740886092
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
@@ -7,7 +8,7 @@ module.exports = {
     // The global variable name any `exports` from `index.js` will be available at
     library: 'SITE',
     // Where webpack will compile the assets
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './_dist'),
   },
   module: {
     rules: [

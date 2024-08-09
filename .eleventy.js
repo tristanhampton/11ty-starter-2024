@@ -2,7 +2,10 @@ const os = require('os');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
 
 module.exports = function (config) {
+	// 11ty uses gitignore to ignore watching files. Disable this.
 	config.setUseGitIgnore(false);
+
+	// We're setting 11ty to build when scss/js is updated, but we want a delay so that the assets have time to build
 	config.setWatchThrottleWaitTime(120);
 
 	//--- Plugins
@@ -14,8 +17,8 @@ module.exports = function (config) {
 	config.addWatchTarget("src/js/**/*.js");
 
 	//--- Adds CSS/JS to _site
-	config.addPassthroughCopy({ "dist/main.css": "css" });
-	config.addPassthroughCopy({ "dist/main.js": "js" });
+	config.addPassthroughCopy({ "_dist/main.css": "css" });
+	config.addPassthroughCopy({ "_dist/main.js": "js" });
 
 	//--- Adds Favicons to _site
 	config.addPassthroughCopy({ "src/favicons": "favicons" });
@@ -25,7 +28,6 @@ module.exports = function (config) {
 
 	//--- Adds fonts to _site
 	config.addPassthroughCopy({ "src/fonts": "fonts" });
-
 
 	//--- Determine if local or live
 	config.addGlobalData('local', function () {
