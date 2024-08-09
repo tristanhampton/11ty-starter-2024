@@ -17,8 +17,8 @@ module.exports = function (config) {
 	config.addWatchTarget("src/js/**/*.js");
 
 	//--- Adds CSS/JS to _site
-	config.addPassthroughCopy({ "_dist/main.css": "css" });
-	config.addPassthroughCopy({ "_dist/main.js": "js" });
+	config.addPassthroughCopy({ "_dist/main.css": "css/main.css" });
+	config.addPassthroughCopy({ "_dist/main.js": "js/main.js" });
 
 	//--- Adds Favicons to _site
 	config.addPassthroughCopy({ "src/favicons": "favicons" });
