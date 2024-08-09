@@ -4,16 +4,24 @@
 @import "global/design-system";
 @import "global/typography";
 @import "global/layout";
-@import "global/navigation.scss";
-@import "global/header.scss";
-@import "global/footer.scss";
-@import "global/components.scss";
-@import "global/buttons.scss";
+@import "global/navigation";
+@import "global/header";
+@import "global/footer";
+@import "global/components";
+@import "global/buttons";
+@import "global/form";
+
+/* Vendors
+ * ----------------------------------------------- */
+@import "vendors/fancybox.min.css";
 
 /* Components
  * ----------------------------------------------- */
-@import "components/banner-default.scss";
-@import "components/text-block.scss";
-@import "components/table.scss";
-@import "components/child-pages.scss";
-@import "components/accordions.scss";
+@import "components/banner-default";
+@import "components/text-block";
+@import "components/table";
+@import "components/child-pages";
+@import "components/accordions";
+@import "components/media";
+@import "components/media-gallery";
+@import "components/form";

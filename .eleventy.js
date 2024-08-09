@@ -29,6 +29,17 @@ module.exports = function (config) {
 	//--- Adds fonts to _site
 	config.addPassthroughCopy({ "src/fonts": "fonts" });
 
+	config.addShortcode("youtube", (videoURL, title) => {
+		const url = new URL(videoURL);
+		const id = url.searchParams.get("v");
+		return `
+			<iframe class="yt-shortcode" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player${title ? ` for ${title}` : ""}" frameborder="0" allowfullscreen></iframe>`;
+	});
+
+	config.addShortcode('galleryItem', (img, caption, galleryID) => {
+		return `<a class="gallery__item" href="${img}" data-fancybox="${galleryID}" data-caption="${caption}"><img src="${img}"></a> `;
+	})
+
 	//--- Determine if local or live
 	config.addGlobalData('local', function () {
 		const hostname = os.hostname();

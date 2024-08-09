@@ -6,7 +6,7 @@
   "scripts": {
     "build:site": "npx @11ty/eleventy",
     "build:assets": "webpack --config webpack.config.prod.js",
-    "build": "npm-run-all build:assets build:site",
+    "build": "npm-run-all build:assets dev:site",
     "dev:site": "npx @11ty/eleventy --serve",
     "dev:assets": "webpack --config webpack.config.dev.js",
     "dev": "npm-run-all --parallel dev:assets dev:site"

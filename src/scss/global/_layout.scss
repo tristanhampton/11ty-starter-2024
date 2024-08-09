@@ -16,3 +16,12 @@ html {
 		flex-shrink: 0;
 	}
 }
+
+picture {
+	overflow: hidden;
+
+	img {
+		width: inherit;
+		height: inherit;
+	}
+}

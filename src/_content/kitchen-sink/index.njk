@@ -32,6 +32,11 @@ title: "Kitchen Sink"
   </ul>
 </section>
 
+<section class="component component--text-block">
+  <h2>Text Block</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, cupiditate, a eos totam voluptates quisquam eligendi voluptatum, sit vel iure hic itaque sunt voluptas expedita molestias unde quis nostrum. Corporis molestias asperiores quae minus, quam laborum error dolores placeat? Voluptates, consequuntur molestias? Dignissimos accusamus rem nobis officia explicabo excepturi pariatur!</p>
+</section>
+
 <section class="component component--accordions">
   <h2>Accordions</h2>
 
@@ -47,3 +52,58 @@ title: "Kitchen Sink"
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita facere recusandae ab iure accusantium deserunt? Animi non omnis ad aliquam!</p>
   </details>
 </section>
+
+<section class="component component--media type--image">
+  <h2>Media Block</h2>
+  <picture>
+    <img src="/img/og-default.jpg" alt="Just a default image">
+  </picture>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit.</p>
+</section>
+
+<section class="component component--media type--image">
+  <h2>Media Block - YouTube Video</h2>
+  {% youtube 'https://www.youtube.com/watch?v=CBPvBV1XMnc' %}
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit.</p>
+</section>
+
+<section class="component component--media-gallery">
+  <h2>Media Gallery</h2>
+
+  <div class="gallery-wrapper">
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+    {% galleryItem '/img/og-default.jpg', 'Just a default image, but as a caption', 'gallery-1' %}
+  </div>
+</section>
+
+<form action="" class="component component--form">
+  <h2>Forms</h2>
+  
+  <div class="form-item">
+    <label for="">Text Input</label>
+    <input type="text">
+  </div>
+
+  <div class="form-item">
+    <label for="">Select</label>
+    <select name="" id="">
+      <option value="">None</option>
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+    </select>
+  </div>
+
+  <div class="form-item">
+    <label for="">Text Area</label>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+  </div>
+
+  <div class="form-item">
+    <label for="">Date</label>
+    <input type="date">
+  </div>
+</form>

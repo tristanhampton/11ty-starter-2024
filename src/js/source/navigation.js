@@ -1,3 +1,7 @@
 export const initNavigation = () => {
-  console.log('add navigation scripts here');
+  const nav = document.querySelector('.site__navigation');
+
+  if (nav) {
+    console.log(nav)
+  }
 }
